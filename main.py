@@ -42,7 +42,7 @@ def main():
     t.gen_text("\x1b[96m", 1, count=0, contin=True)  # buffer to be removed
     t.set_font(FONT_FILE_LOGO, 66)
     # t.toggle_show_cursor(True)
-    os_logo_text = "GIF OS"
+    os_logo_text = "ERRY ASRI"
     mid_row = (t.num_rows + 1) // 2
     mid_col = (t.num_cols - len(os_logo_text) + 1) // 2
     effect_lines = gifos.effects.text_scramble_effect_lines(
@@ -80,22 +80,21 @@ def main():
 
     ignore_repos = ["archiso-zfs", "archiso-zfs-archive"]
     git_user_details = gifos.utils.fetch_github_stats("erryasri", ignore_repos)
-    user_age = gifos.utils.calc_age(26, 7, 2002)
     t.clear_frame()
     top_languages = [lang[0] for lang in git_user_details.languages_sorted]
     user_details_lines = f"""
     \x1b[30;101merryasri@GitHub\x1b[0m
     --------------
     \x1b[96mOS:     \x1b[93mLinux, Windows 11, Android 14\x1b[0m
-    \x1b[96mHost:   \x1b[93mNetaji Subhash Engineering College \x1b[94m#NSEC\x1b[0m
-    \x1b[96mKernel: \x1b[93mComputer Science & Engineering \x1b[94m#CSE\x1b[0m
-    \x1b[96mUptime: \x1b[93m{user_age.years} years, {user_age.months} months, {user_age.days} days\x1b[0m
-    \x1b[96mIDE:    \x1b[93mneovim, VSCode\x1b[0m
+    \x1b[96mHost:   \x1b[93mMultimedia University \x1b[94m#MMU\x1b[0m
+    \x1b[96mKernel: \x1b[93mInformation Technology (Secure Technology) \x1b[94m#Security\x1b[0m
+    \x1b[96mProvider: \x1b[93mAWS, Azure, Google Cloud, Alibaba Cloud\x1b[0m
+    \x1b[96mNiche:    \x1b[93mCloud, DevOps/DevSecOps, SRE, Security\x1b[0m
     
     \x1b[30;101mContact:\x1b[0m
     --------------
     \x1b[96mEmail:      \x1b[93merryasricareer@gmail.com\x1b[0m
-    \x1b[96mLinkedIn:   \x1b[93msen-avishek\x1b[0m
+    \x1b[96mLinkedIn:   \x1b[93mErry Asri\x1b[0m
     
     \x1b[30;101mGitHub Stats:\x1b[0m
     --------------
@@ -114,7 +113,7 @@ def main():
     t.gen_typing_text("\x1b[91mfetch.s", 1, contin=True)
     t.delete_row(1, prompt_col)
     t.gen_text("\x1b[92mfetch.sh\x1b[0m", 1, contin=True)
-    t.gen_typing_text(" -u x0rzavi", 1, contin=True)
+    t.gen_typing_text(" -u erryasri", 1, contin=True)
 
     t.set_font(FONT_FILE_MONA, 16, 0)
     t.toggle_show_cursor(False)
@@ -150,7 +149,7 @@ def main():
     t.gen_text(user_details_lines, 2, 35, count=5, contin=True)
     t.gen_prompt(t.curr_row)
     t.gen_typing_text(
-        "\x1b[92m# Have a nice day kind stranger :D Thanks for stopping by!",
+        "\x1b[92m# Have a nice day my fellow :D Thanks for stopping by!",
         t.curr_row,
         contin=True,
     )
